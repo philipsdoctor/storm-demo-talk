@@ -1,8 +1,8 @@
-(ns demo.topology
+(ns demo.ruby-topology
   (:require [demo.spouts.sensor-spout :refer [sensor-readings]]
             [demo.bolts.db-bolts :refer [store]]
             [demo.bolts.conversion :refer [convert-to-celsius convert-atp-hg]]
-            [demo.bolts.monitor :refer [set-alarms running-average]]
+;            [demo.bolts.monitor :refer [set-alarms running-average]]
             [backtype.storm [clojure :refer [topology spout-spec bolt-spec]] [config :refer :all]])
   (:import [backtype.storm LocalCluster])
   (:gen-class))
@@ -13,7 +13,7 @@
 (def demo-bolt-map
   {"convert-to-celsius" (bolt-spec {["sensor-spout" "temp"] :shuffle} convert-to-celsius :p 5)
    "convert-atp-hg" (bolt-spec {["sensor-spout" "pressure"] :shuffle} convert-atp-hg :p 5)
-   "set-alarms" (bolt-spec {"convert-to-celsius" :shuffle} set-alarms :p 2)
+;   "set-alarms" (bolt-spec {"convert-to-celsius" :shuffle} set-alarms :p 2)
 ;   "running-average" (bolt-spec {"convert-to-celsius" ["sensor-id"]} running-average :p 2)
 ;   "store" (bolt-spec {"convert-to-celsius" :shuffle} store :p 2)
    })

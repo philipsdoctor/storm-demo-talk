@@ -6,6 +6,10 @@ A demo for storm with clojure & python for a presentation
 
 lein run -m demo.topology/run!
 
+lein run -m demo.python-topology/run!
+
+lein run -m demo.ruby-topology/run!
+
 ## License
 
 Copyright © 2013 FIXME

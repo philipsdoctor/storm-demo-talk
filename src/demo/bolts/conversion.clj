@@ -3,12 +3,12 @@
             [clojure.tools.logging :as log])
   (:gen-class))
 
-(defbolt convert-to-celsius ["time" "id" "celsius"] [tuple collector]
+(defbolt convert-to-celsius ["id" "celsius"] [tuple collector]
   (do
     (let [[timestamp id fahrenheit] tuple
           celsius (* (- fahrenheit 32) (/ 5.0 9.0))]
       (log/debug (str "time: " timestamp " id: " id " celsius: " celsius))
-      (emit-bolt! collector [timestamp id celsius] :anchor tuple)
+      (emit-bolt! collector [id celsius] :anchor tuple)
 
       (ack! collector tuple))))
 
