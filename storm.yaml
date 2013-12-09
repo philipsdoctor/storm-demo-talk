@@ -1,0 +1,7 @@
+########### These MUST be filled in for a storm configuration
+storm.zookeeper.servers:
+    - "127.0.0.1"
+
+storm.local.dir: "/mnt/storm"
+
+nimbus.host: "127.0.0.1"

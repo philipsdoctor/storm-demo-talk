@@ -2,6 +2,8 @@
   :description "A simple storm demo for a short presentation."
   :url "http://slid.es/philipdoctor/storm-with-python-and-a-side-of-clojure"
   :resource-paths ["multilang"]
+  :main demo.TopologySubmitter
+  :aot [demo.TopologySubmitter]
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
