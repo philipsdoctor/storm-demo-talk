@@ -6,10 +6,9 @@
   :aot [demo.TopologySubmitter]
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.1"]
-                 [incanter "1.5.1"]]
+  :dependencies [[incanter "1.5.1"]]
   :profiles {:dev {:dependencies [[storm "0.8.1"]
-                                  [org.clojure/clojure "1.5.1"]
+                                  [org.clojure/clojure "1.4.0"]
                                   ; to placate lighttable
                                   [org.clojure/clojurescript "0.0-2030"]
                                   [antler/commons-io "2.2.0"]
