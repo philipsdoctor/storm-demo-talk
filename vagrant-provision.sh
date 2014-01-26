@@ -49,7 +49,7 @@ cd ..
 
 sudo make install
 
-sud apt-get install unzip
+sudo apt-get install unzip
 
 cd ..
 

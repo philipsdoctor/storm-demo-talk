@@ -12,5 +12,6 @@
                                   ; to placate lighttable
                                   [org.clojure/clojurescript "0.0-2030"]
                                   [antler/commons-io "2.2.0"]
+                                  [cheshire "5.2.0"]
                                   ; idiomatic clj for lighttable
                                   [lein-kibit "0.0.8"]]}})
