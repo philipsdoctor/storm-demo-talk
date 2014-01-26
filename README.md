@@ -4,11 +4,7 @@ A demo for storm with clojure & python for a presentation
 
 ## Usage
 
-lein run -m demo.topology/run!
-
 lein run -m demo.python-topology/run!
-
-lein run -m demo.ruby-topology/run!
 
 ## License
 
