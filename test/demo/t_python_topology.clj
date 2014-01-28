@@ -1,4 +1,4 @@
-(ns demo.test-topology
+(ns demo.t-python-topology
   (:use [backtype.storm testing])
   (:require [demo.python-topology :as top]
             [midje.sweet :refer [fact facts]]
@@ -27,6 +27,7 @@
       [running-ave-first-result running-ave-second-result] (get results "running-average")
       [_ first-running-ave] (.values running-ave-first-result) 
       [_ second-running-ave] (.values running-ave-second-result)]
+  ; for your edification, also check out read-tuples
   (facts "Conversion to celsius bolt functions in the topology"
     (fact "Only temp stream was routed to this bolt" conv-to-cel-id => mock-temp-sensor-id)
     (fact "Sensor reading was converted to Celsius" conv-to-cel-vals 22.277777777777775))
@@ -34,8 +35,8 @@
   (fact "Because I just log something for set alarm, I don't have much to test... oops" true => true)
 
   (facts "Running average topology integration"
-    (fact "Running average groups on ID" (= first-running-ave second-running-ave) => false))
-    (fact "Running average is correctly calculated" second-running-ave => 24.25)) 
+    (fact "Running average groups on ID" (not= second-running-ave 79.2))
+    (fact "Running average is correctly calculated" second-running-ave => 24.25))) 
 
 
 
