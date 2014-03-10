@@ -8,6 +8,6 @@ lein run -m demo.python-topology/run!
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 philip.s.doctor@gmail.com
 
-Distributed under the Eclipse Public License, the same as Clojure.
+Distributed under GPL V3.

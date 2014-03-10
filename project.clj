@@ -4,8 +4,8 @@
   :resource-paths ["multilang"]
   :main demo.TopologySubmitter
   :aot [demo.TopologySubmitter]
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "GNU GENERAL PUBLIC LICENSE V3"
+            :url "https://www.gnu.org/copyleft/gpl.html"}
   :dependencies [[incanter "1.5.1"]]
   :profiles {:dev {:plugins [[lein-midje "3.0.0"]]
                    :dependencies [[storm "0.8.1"]
